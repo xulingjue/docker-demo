@@ -1,0 +1,22 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: k8s-service
+  labels:
+    app: k8s-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: k8s-service
+  template:
+    metadata:
+      labels:
+        app: k8s-service
+    spec:
+      containers:
+        - name: k8s-service
+          image: docker-image.mqcoding.com:5000/docker-demo:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8801
