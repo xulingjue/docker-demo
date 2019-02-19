@@ -24,6 +24,6 @@ public class HelloController {
     @GetMapping("")
     public String sayHi() {
         logger.info(String.format("hello %s log!", fromSystem));
-        return String.format("hello %s log!", fromSystem);
+        return String.format("hello %s new log!", fromSystem);
     }
 }
