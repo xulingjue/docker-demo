@@ -1,21 +1,21 @@
 apiVersion: apps/v1beta1
 kind: Deployment
 metadata:
-  name: k8s-service
+  name: k8s-demo
   labels:
-    app: k8s-service
+    app: k8s-demo
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: k8s-service
+      app: k8s-demo
   template:
     metadata:
       labels:
-        app: k8s-service
+        app: k8s-demo
     spec:
       containers:
-        - name: k8s-service
+        - name: k8s-demo
           image: docker-image.mqcoding.com:5000/docker-demo:latest
           imagePullPolicy: IfNotPresent
           ports:
