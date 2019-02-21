@@ -23,7 +23,7 @@ public class HelloController {
 
     @GetMapping("")
     public String sayHi() {
-        logger.info(String.format("hello %s new log!", fromSystem));
-        return String.format("hello %s new log!", fromSystem);
+        logger.info(String.format("hello %s new2 log!", fromSystem));
+        return String.format("hello %s new2 log!", fromSystem);
     }
 }
