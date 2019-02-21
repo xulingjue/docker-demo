@@ -14,7 +14,6 @@ spec:
       labels:
         app: k8s-demo
     spec:
-      serviceAccount: jenkins
       containers:
         - name: k8s-demo
           image: docker-image.mqcoding.com:5000/docker-demo:latest
